@@ -345,7 +345,6 @@ class ServicesTestCase(TestCase):
         response_no_data = get_historical_performance_detail(request, non_existing_vendor_id)
         self.assertEqual(response_no_data.status_code, 200)
                 
-# class VendorTestCase(TestCase):
     def test_update_vendor_metrics(self):        
         vendor = Vendor.objects.create(name="Test Vendor", contact_details="Contact", address="Address", vendor_code="V1")
                 
