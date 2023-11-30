@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Vendor Management System</title>
+</head>
+<body>
+    <div align="center">
+    <h2>Welcome to the Dashboard</h2>
+    
+    <p><a href="{% url 'vendors' %}">List of Vendors</a></p>
+    <p><a href="{% url 'purchase_orders' %}">List of Purchase Orders</a></p>
+    <p><a href="{% url 'historical_performance' pk=0 %}">Vendor Historical Performance</a></p>
+    <p><a href="{% url 'logout' %}">Logout</a></p>
+    
+    </div>
+</body>
+</html>

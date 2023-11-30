@@ -1,0 +1,81 @@
+Use commands in the order they are mentioned:
+
+from vendor_management_app.models import Vendor
+
+
+vendor = Vendor(
+    name='New Vendor',
+    contact_details='9876543210',
+    address='456 Main St',
+    vendor_code='V456',
+    on_time_delivery_rate=0.85,
+    quality_rating_avg=4.2,
+    average_response_time=2.5,
+    fulfilment_rate=0.92
+)
+vendor.save()
+
+
+vendors = Vendor.objects.all()
+print(vendors)
+
+
+vendor = Vendor.objects.get(vendor_code='V456')  
+vendor.name = 'Updated Vendor'
+vendor.save()
+
+
+vendor = Vendor.objects.get(vendor_code='V456')  
+vendor.delete()
+
+from vendor_management_app.models import PurchaseOrder, Vendor
+from django.utils import timezone
+
+vendor = Vendor(
+    name='New Vendor',
+    contact_details='9876543210',
+    address='456 Main St',
+    vendor_code='V456',
+    on_time_delivery_rate=0.85,
+    quality_rating_avg=4.2,
+    average_response_time=2.5,
+    fulfilment_rate=0.92
+)
+vendor.save()
+
+
+vendors = Vendor.objects.all()
+print(vendors)
+
+
+vendor = Vendor.objects.get(vendor_code='V456')
+
+purchase_order = PurchaseOrder(
+    po_number='PO456',
+    vendor=vendor,
+    order_date=timezone.now(),
+    delivery_date=timezone.now(),
+    items={'item2': 5},  
+    quantity=5,
+    status='Pending',
+    quality_rating=4.2,  
+    acknowledgment_date=timezone.now()
+)
+purchase_order.save()
+
+
+purchase_orders = PurchaseOrder.objects.all()
+print(purchase_orders)
+
+
+purchase_order = PurchaseOrder.objects.get(po_number='PO456')  
+purchase_order.status = 'pending'
+purchase_order.save()
+
+
+purchase_order = PurchaseOrder.objects.get(po_number='PO456')  
+purchase_order.delete()
+
+
+
+
