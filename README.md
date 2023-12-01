@@ -1,9 +1,11 @@
 # Vendor_Management_System
+
 A Vendor Management System using Django and Django REST Framework. This
 system will handle vendor profiles, track purchase orders, and calculate vendor performance
 metrics
 
-## Task
+## Task:
+
 1. Vendor Profile Management:
   Create a model to store vendor info with CRUD API endpoints.
   Endpoints include creating, listing, retrieving, updating, and deleting vendors.
@@ -32,7 +34,7 @@ metrics
   Vendor Performance Endpoint (GET /api/vendors/{vendor_id}/performance) retrieves calculated metrics.
   Consider an Update Acknowledgment Endpoint (POST /api/purchase_orders/{po_id}/acknowledge).
 
-## Project Setup
+## Project Setup:
 1. Go to the GitHub repository
 2. Copy the URL for the repository
 3. Install Git in local machine
@@ -49,7 +51,7 @@ metrics
     {virtual environment name}\Scripts\activate	- Windows
 13. Install dependencies using 'pip install -r requirements.txt'
 
-## Instruction for Running Test Suite
+## Instruction for Running Test Suite:
 1. Open the terminal in your IDE
 2. Activate virtual environment using :
    source {virtual environment name}/bin/activate	- Ubuntu
