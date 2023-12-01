@@ -58,3 +58,9 @@ metrics
     {virtual environment name}\Scripts\activate	- Windows
 4. Change directory to the project root directory
 5. Run test suite using "python manage.py test"
+
+## Important Instructions:
+1. The url for accessing this system is 'http://127.0.0.1:8000/login/'
+2. The credentials for logging in is present in 'django_admin_credentials.txt'
+3. There is also 'api_doc.xlsx', which contains details for API testing
+4. There is 'django_orm.txt' which contains queries to interact with database models using Django ORM and Django Shell
